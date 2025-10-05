@@ -5,157 +5,161 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Code Learner Hub</title>
 <link rel="stylesheet" href="css/style.css">
-
 <style>
-/* ======== GERAL ======== */
-body {
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    background: linear-gradient(135deg, #f3ecff, #e6f2ff);
-    color: #333;
-}
+    /* 🌷 Estilo geral */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', 'Segoe UI', sans-serif;
+        background: linear-gradient(180deg, #fefefe 0%, #f3f0ff 100%);
+        color: #3a3455;
+        line-height: 1.6;
+    }
 
-/* ======== CABEÇALHO ======== */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background-color: #5e4caf;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+    header {
+        background: linear-gradient(90deg, #b59cf0, #8e7bd8);
+        color: white;
+        padding: 25px;
+        text-align: center;
+        box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        letter-spacing: 0.5px;
+    }
 
-header h1 {
-    margin: 0;
-    font-size: 2rem;
-    letter-spacing: 1px;
-}
+    header h1 {
+        margin: 0;
+        font-size: 2.2em;
+        font-weight: 600;
+    }
 
-nav {
-    margin-top: 10px;
-}
+    nav {
+        margin-top: 10px;
+    }
 
-nav a {
-    color: white;
-    margin: 0 12px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: 0.3s;
-}
+    nav a {
+        color: #fff;
+        margin: 0 12px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
 
-nav a:hover {
-    color: #ffd6f9;
-    border-bottom: 2px solid #ffd6f9;
-}
+    nav a:hover {
+        text-decoration: underline;
+        text-shadow: 0 0 6px rgba(255,255,255,0.7);
+    }
 
-/* ======== CONTEÚDO PRINCIPAL ======== */
-main {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
+    main {
+        padding: 40px 20px;
+        max-width: 1000px;
+        margin: auto;
+    }
 
-section {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-    margin-bottom: 50px;
-    padding: 30px;
-    transition: 0.3s;
-}
+    section {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding: 25px;
+        margin-bottom: 50px;
+        box-shadow: 0 4px 25px rgba(180, 160, 230, 0.25);
+        border: 1px solid rgba(200, 180, 255, 0.3);
+    }
 
-section:hover {
-    transform: scale(1.01);
-}
+    h2 {
+        color: #6d56c1;
+        font-size: 1.6em;
+        margin-bottom: 15px;
+        border-left: 5px solid #b59cf0;
+        padding-left: 10px;
+        font-weight: 600;
+    }
 
-h2 {
-    color: #5e4caf;
-    border-left: 5px solid #5e4caf;
-    padding-left: 10px;
-}
+    p {
+        font-size: 1.05em;
+    }
 
-/* ======== SOBRE ======== */
-#sobre img {
-    width: 100%;
-    max-width: 280px;
-    border-radius: 12px;
-    display: block;
-    margin: 15px auto;
-}
+    img {
+        display: block;
+        border-radius: 12px;
+        margin: 15px auto;
+        max-width: 100%;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
 
-/* ======== MÍDIA ======== */
-.media-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15px;
-}
+    /* 🩵 Mídias */
+    .media-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        margin-top: 15px;
+    }
 
-video, audio {
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+    video, audio {
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
 
-video {
-    width: 360px;
-    height: auto;
-}
+    video {
+        width: 400px;
+        max-width: 100%;
+    }
 
-/* ======== RESUMO ======== */
-#resumo div {
-    border: 2px solid #5e4caf;
-    background-color: #f6f3ff;
-    border-radius: 10px;
-    padding: 15px;
-    max-width: 420px;
-    margin: 0 auto;
-}
+    /* 💫 Caixa resumo */
+    #resumo div {
+        border: 2px solid #d6caff;
+        border-radius: 15px;
+        padding: 20px;
+        background-color: #f9f6ff;
+        text-align: center;
+        font-style: italic;
+        font-size: 1.1em;
+        color: #5e4caf;
+        box-shadow: 0 3px 15px rgba(190,170,255,0.25);
+    }
 
-/* ======== BOTÃO TOPO ======== */
-.voltar-topo {
-    display: inline-block;
-    margin: 20px auto;
-    text-decoration: none;
-    background-color: #610e40;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
-}
+    /* 🌿 Botão voltar ao topo */
+    .voltar-topo {
+        display: inline-block;
+        background-color: #7c62ce;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 8px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.3s;
+        box-shadow: 0 4px 10px rgba(124, 98, 206, 0.3);
+    }
 
-.voltar-topo:hover {
-    background-color: #8a2c6d;
-}
+    .voltar-topo:hover {
+        background-color: #9b84e6;
+        transform: translateY(-2px);
+    }
 
-/* ======== RODAPÉ ======== */
-footer {
-    background-color: #5e4caf;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 50px;
-}
+    /* 🌸 Rodapé */
+    footer {
+        background-color: #efeaff;
+        text-align: center;
+        padding: 20px;
+        font-size: 0.95em;
+        color: #5a4b91;
+        border-top: 1px solid #d4c8ff;
+    }
 
-footer a {
-    color: #ffd6f9;
-    text-decoration: none;
-    font-weight: bold;
-}
+    footer a {
+        color: #6d56c1;
+        text-decoration: none;
+        font-weight: 600;
+    }
 
-footer a:hover {
-    text-decoration: underline;
-}
+    footer a:hover {
+        text-decoration: underline;
+    }
 </style>
 </head>
-
 <body>
+
 <header id="topo">
-    <h1>🌸 Code Learner Hub</h1>
+    <h1>Code Learner Hub</h1>
     <nav>
         <a href="index.html">Home</a>
         <a href="curriculo.html">Currículo</a>
@@ -166,46 +170,47 @@ footer a:hover {
 </header>
 
 <main>
-    <!-- SOBRE MIM -->
+    <!-- Sobre mim -->
     <section id="sobre">
-        <h2>Sobre Mim</h2>
-        <p>Olá! Sou <strong>Brenda</strong>, estudante de Sistemas de Informação apaixonada por tecnologia, astronomia, design e desenvolvimento web. Aqui compartilho um pouco do que amo e dos meus objetivos para o futuro.</p>
-        <img src="img/minhafoto.jpg" alt="Foto de Brenda">
-        <p>Sonho em me tornar uma desenvolvedora completa — unindo criatividade e lógica para criar experiências digitais criativas e funcionais.</p>
+        <h2>Minha História</h2>
+        <p>Olá! Meu nome é Brenda. Estudo Sistemas de Informação e amo desenvolvimento web. Aqui você pode conhecer minhas habilidades, hobbies e planos futuros.</p>
+        <img src="meu site/img/minhafoto.jpg" alt="Minha foto">
+        <p>Objetivos: Me tornar uma desenvolvedora web completa, dominar front-end e back-end, e criar projetos criativos e funcionais.</p>
     </section>
 
-    <!-- VIDA PESSOAL -->
+    <!-- Vida pessoal e hobbies -->
     <section id="pessoal">
         <h2>Vida Pessoal e Hobbies</h2>
-        <p>Nos meus momentos livres, gosto de ler, assistir animes, acompanhar Fórmula 1 e estudar astronomia. Também adoro música, esportes e pequenos projetos criativos.</p>
+        <p>Meus hobbies incluem: ler, astronomia, Fórmula 1, esportes, música e animes.</p>
         <div class="media-container">
             <video controls>
-                <source src="media/Satisfying-anime-cooking.mp4" type="video/mp4">
+                <source src="meu site/media/Satisfying-ime-cooking.mp4" type="video/mp4">
                 Seu navegador não suporta vídeo.
             </video>
             <audio controls>
-                <source src="media/formula-s.mp3" type="audio/mp3">
+                <source src="meu site/media/formula-s.mp3" type="audio/mp3">
                 Seu navegador não suporta áudio.
             </audio>
         </div>
         <div style="text-align:center; margin-top: 15px;">
-            <img src="media/tumblr_m2kza4yplA1qlt7lao4_250.gif" alt="Gif fofo" width="400">
+            <img src="meu site/media/tumblr_m2kza4yplA1qlt7lao4_250.gif" alt="Gif fofo" width="450">
         </div>
     </section>
 
-    <!-- RESUMO -->
+    <!-- Pequeno resumo -->
     <section id="resumo">
         <h2>Pequeno Resumo</h2>
         <div>
-            <p>Hi! I'm Brenda, a fan of technology, astronomy, anime, Formula 1, and sports.  
-            I love exploring new ideas, creating projects, and learning something new every day. ✨</p>
+            <p>
+                Hi! I'm Brenda, a fan of technology, astronomy, anime, Formula 1, and sports. I love exploring new ideas, creating projects, and learning new things every day.
+            </p>
         </div>
     </section>
-
-    <div style="text-align:center;">
-        <a href="#topo" class="voltar-topo">⬆️ Voltar ao topo</a>
-    </div>
 </main>
+
+<div style="text-align:center;">
+    <a href="#topo" class="voltar-topo">⬆️ Voltar ao topo</a>
+</div>
 
 <footer>
     <p>&copy; 2024 Code Learner Hub</p>
