@@ -5,139 +5,157 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Code Learner Hub</title>
 <link rel="stylesheet" href="css/style.css">
+
 <style>
-    /* Fundo e geral */
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background: linear-gradient(160deg, #f0eafc, #e8f4fd);
-        color: #333;
-    }
+/* ======== GERAL ======== */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #f3ecff, #e6f2ff);
+    color: #333;
+}
 
-    header {
-        background-color: #5e4caf;
-        color: white;
-        padding: 15px;
-        text-align: center;
-    }
+/* ======== CABEÇALHO ======== */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #5e4caf;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 
-    nav a {
-        color: white;
-        margin: 0 10px;
-        text-decoration: none;
-        font-weight: bold;
-    }
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
 
-    nav a:hover {
-        text-decoration: underline;
-    }
+nav {
+    margin-top: 10px;
+}
 
-    main {
-        padding: 20px;
-        max-width: 1000px;
-        margin: auto;
-    }
+nav a {
+    color: white;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
 
-    section {
-        margin-bottom: 50px;
-        padding: 20px;
-        background-color: rgba(255,255,255,0.9);
-        border-radius: 15px;
-        box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    }
+nav a:hover {
+    color: #ffd6f9;
+    border-bottom: 2px solid #ffd6f9;
+}
 
-    h2 {
-        color: #5e4caf;
-        margin-bottom: 15px;
-    }
+/* ======== CONTEÚDO PRINCIPAL ======== */
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 
-    img {
-        border-radius: 10px;
-        margin: 10px 0;
-        max-width: 100%;
-    }
+section {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+    padding: 30px;
+    transition: 0.3s;
+}
 
-    /* Tabela */
-    table {
-        border-collapse: collapse;
-        width: 100%;
-        margin: 20px 0;
-    }
+section:hover {
+    transform: scale(1.01);
+}
 
-    table, th, td {
-        border: 1px solid #5e4caf;
-    }
+h2 {
+    color: #5e4caf;
+    border-left: 5px solid #5e4caf;
+    padding-left: 10px;
+}
 
-    th, td {
-        padding: 10px;
-        text-align: left;
-    }
+/* ======== SOBRE ======== */
+#sobre img {
+    width: 100%;
+    max-width: 280px;
+    border-radius: 12px;
+    display: block;
+    margin: 15px auto;
+}
 
-    /* Video e áudio lado a lado */
-    .media-container {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        align-items: center;
-    }
+/* ======== MÍDIA ======== */
+.media-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
 
-    video, audio {
-        border-radius: 10px;
-    }
+video, audio {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
 
-    video {
-        width: 400px;
-        height: auto;
-    }
+video {
+    width: 360px;
+    height: auto;
+}
 
-    /* Botão voltar ao topo */
-    .voltar-topo {
-        display: inline-block;
-        margin: 30px 0;
-        text-decoration: none;
-        background-color: #610e40;
-        color: white;
-        padding: 10px 15px;
-        border-radius: 5px;
-        font-weight: bold;
-    }
+/* ======== RESUMO ======== */
+#resumo div {
+    border: 2px solid #5e4caf;
+    background-color: #f6f3ff;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 420px;
+    margin: 0 auto;
+}
 
-    .voltar-topo:hover {
-        background-color: #8a2c6d;
-    }
+/* ======== BOTÃO TOPO ======== */
+.voltar-topo {
+    display: inline-block;
+    margin: 20px auto;
+    text-decoration: none;
+    background-color: #610e40;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
-    /* Links externos */
-    .links-externos a {
-        display: inline-block;
-        margin-right: 15px;
-        color: #5e4caf;
-        text-decoration: none;
-        font-weight: bold;
-    }
+.voltar-topo:hover {
+    background-color: #8a2c6d;
+}
 
-    .links-externos a:hover {
-        text-decoration: underline;
-    }
+/* ======== RODAPÉ ======== */
+footer {
+    background-color: #5e4caf;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
 
-    /* Hobbies com vídeos pequenos */
-    .hobbies {
-        display: flex;
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+footer a {
+    color: #ffd6f9;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-    .hobbies video {
-        width: 200px;
-        height: auto;
-    }
+footer a:hover {
+    text-decoration: underline;
+}
 </style>
 </head>
-<body>
 
+<body>
 <header id="topo">
-    <h1>Code Learner Hub</h1>
+    <h1>🌸 Code Learner Hub</h1>
     <nav>
         <a href="index.html">Home</a>
         <a href="curriculo.html">Currículo</a>
@@ -148,49 +166,46 @@
 </header>
 
 <main>
-    <!-- Sobre mim -->
+    <!-- SOBRE MIM -->
     <section id="sobre">
-        <h2>Minha História</h2>
-        <p>Olá! Meu nome é Brenda. Estudo Sistemas de Informação e amo desenvolvimento web. Aqui você pode conhecer minhas habilidades, hobbies e planos futuros.</p>
-        <img src="meu site/img/minhafoto.jpg" alt="Minha foto">
-        <p>Objetivos: Me tornar uma desenvolvedora web completa, dominar front-end e back-end, e criar projetos criativos e funcionais.</p>
+        <h2>Sobre Mim</h2>
+        <p>Olá! Sou <strong>Brenda</strong>, estudante de Sistemas de Informação apaixonada por tecnologia, astronomia, design e desenvolvimento web. Aqui compartilho um pouco do que amo e dos meus objetivos para o futuro.</p>
+        <img src="img/minhafoto.jpg" alt="Foto de Brenda">
+        <p>Sonho em me tornar uma desenvolvedora completa — unindo criatividade e lógica para criar experiências digitais elegantes e funcionais.</p>
     </section>
 
-    <!-- Vida pessoal e hobbies -->
+    <!-- VIDA PESSOAL -->
     <section id="pessoal">
         <h2>Vida Pessoal e Hobbies</h2>
-        <p>Meus hobbies incluem: ler, astronomia, Fórmula 1, esportes, música e animes.</p>
+        <p>Nos meus momentos livres, gosto de ler, assistir animes, acompanhar Fórmula 1 e estudar astronomia. Também adoro música, esportes e pequenos projetos criativos.</p>
         <div class="media-container">
             <video controls>
-                <source src="meu site/media/Satisfying-ime-cooking.mp4" type="video/mp4">
+                <source src="media/Satisfying-anime-cooking.mp4" type="video/mp4">
                 Seu navegador não suporta vídeo.
             </video>
             <audio controls>
-                <source src="meu site/media/formula-s.mp3" type="audio/mp3">
+                <source src="media/formula-s.mp3" type="audio/mp3">
                 Seu navegador não suporta áudio.
             </audio>
         </div>
         <div style="text-align:center; margin-top: 15px;">
-            <img src="meu site/media/tumblr_m2kza4yplA1qlt7lao4_250.gif" alt="Gif fofo" width="450">
+            <img src="media/tumblr_m2kza4yplA1qlt7lao4_250.gif" alt="Gif fofo" width="400">
         </div>
     </section>
 
-    <!-- Pequeno resumo -->
+    <!-- RESUMO -->
     <section id="resumo">
         <h2>Pequeno Resumo</h2>
-        <div style="border: 2px solid #5e4caf; 
-                    border-radius: 10px; 
-                    padding: 15px; 
-                    background-color: #f5f0ff; 
-                    max-width: 400px;">
-            <p>
-                Hi! I'm Brenda, a fan of technology, astronomy, anime, Formula 1, and sports. I love exploring new ideas, creating projects, and learning new things every day.
-            </p>
+        <div>
+            <p>Hi! I'm Brenda, a fan of technology, astronomy, anime, Formula 1, and sports.  
+            I love exploring new ideas, creating projects, and learning something new every day. ✨</p>
         </div>
     </section>
-</main>
 
-<a href="#topo" class="voltar-topo">⬆️ Voltar ao topo</a>
+    <div style="text-align:center;">
+        <a href="#topo" class="voltar-topo">⬆️ Voltar ao topo</a>
+    </div>
+</main>
 
 <footer>
     <p>&copy; 2024 Code Learner Hub</p>
